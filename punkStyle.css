@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Nabla&family=Rubik+Vinyl&family=Splash&display=swap');
+/* Generales */
+:root{
+    --dark : #0c0c0c; /* Cambiar en el futuro */
+    --main : #dddd11;
+    --accent : #ff0099;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main);
+}
+
+
+/* Etiquetas generales */
+body{
+    font-family: 'Consolas', monospace;
+}
+h2{
+    color: var(--accent);
+    font-family: 'Barriecito', monospace;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+a{
+    color: var(--main);
+    text-decoration: underline;
+}
+a:hover{
+    color: var(--accent);
+    text-decoration: underline;
+}
+textarea{
+    font-size: 10px;
+    color: var(--accent);
+    background-color: var(--dark);
+    width: 50%;
+    height: 7vh;
+    margin-right: 2vh;
+    float: right;
+}
+p{
+    margin-bottom: 0.7em;
+}
+img{
+    width: 100%;
+}
+
+/* Clases generales */
+.row{
+    width: 100%;
+}
+
+
+/* Clases del mainframe */
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: var(--dark);
+    background-position: 0px 0px;
+}
+.lateral{
+    width: 480px;
+    height: 100vh;
+    display: flex;
+    border-right: 1px solid var(--main);
+    background-color: var(--dark);
+}
+.barra{
+    width: 25vw;
+    max-width: 100px;
+    height: 100vh;
+    border-right: 1px solid var(--main);
+    text-align: center;
+}
+.barra marquee{
+    margin-left: 0;
+    padding-left: 0;
+    height: 40vh;
+}
+.barra a img{
+    width: 100px;
+}
+.barra div marquee a img{
+    width: 20vw;
+    max-width: 88px;
+}
+.frame{
+    width: 380px;
+    height: 100%;
+}
+.frame iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.localizaciones{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-image: url(punk_fondo.png);
+    background-size: cover;
+}
+.logo{
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    left: 30%;
+}
+.logo img{
+    height: 100%;
+}
+.localizacion{
+    width: 5vw;
+    align-items: center;
+}
+.localizacion img{
+    width: 100%;
+}
+.about{
+    position: absolute;
+    left: 8%;
+    top: 32vh;
+}
+.ocs{
+    position: absolute;
+    left: 16%;
+    top: 87vh;
+}
+.home{
+    position: absolute;
+    left: 36%;
+    top: 55vh;
+}
+.promo{
+    position: absolute;
+    left: 52%;
+    top: 38vh;
+}
+.blog{
+    position: absolute;
+    left: 68%;
+    top: 77vh;
+}
+.art{
+    position: absolute;
+    left: 87%;
+    top: 36vh;
+}
+
+
+/* Clases de iframes */
+.portadaAbout{
+    background-color: var(--main);
+    background-image: url(punk_cabecera2.png);
+    background-size: cover;
+    height: 25vh;
+    width: 379px;
+}
+.portadaOcs{
+    background-color: var(--main);
+    background-image: url(punk_cabecera3.png);
+    background-size: cover;
+    height: 25vh;
+    width: 379px;
+}
+.portadaHome{
+    background-color: var(--main);
+    background-image: url(punk_cabecera1.png);
+    background-size: cover;
+    height: 25vh;
+    width: 379px;
+}
+.portadaPromo{
+    background-color: var(--main);
+    background-image: url(punk_cabecera4.png);
+    background-size: cover;
+    height: 25vh;
+    width: 379px;
+}
+.portadaBlog{
+    background-color: var(--main);
+    background-image: url(punk_cabecera6.png);
+    background-size: cover;
+    min-height: 25vh;
+    width: 379px;
+}
+.portadaArt{
+    background-color: var(--main);
+    background-image: url(punk_cabecera5.png);
+    background-size: cover;
+    height: 25vh;
+    width: 379px;
+}
+.vacio{
+    height: 10px;
+}
+.menuDesplegable{
+    margin-left: 5%;
+    width: 90%;
+    margin-right: 5%;
+    border-radius: 10px;
+    background-color: var(--dark);
+    border: 1px solid var(--main);
+    display: block;
+    padding: 10px;
+    padding-left: 20px;
+    color: var(--accent);
+}
+.menuDesplegable ul{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    left: -23px;
+    top: 56px;
+    width: 104%;
+    margin-right: 0;
+    margin-left: 0;
+}
+.menuDesplegable:hover > ul {
+    display: block;
+}
+.menuDesplegable ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--accent);
+    padding: 10px;
+    padding-left: 20px;
+    background-color: var(--dark);
+    border: 1px solid var(--main);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menuDesplegable ul li a:hover{
+    color: var(--accent);
+    background-color: var(--main);
+}
+.titulo{
+    height: 17vh;
+    width: 379px;
+    text-align: center;
+    color: var(--main);
+    border-top: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
+    font-family: 'Consolas';
+    background-color: var(--dark);
+    line-height: 120%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.titulo h1{
+    font-family: 'Barriecito';
+    font-size: 40px;
+    color: var(--accent);
+}
+.contenido{
+    background-color: var(--dark);
+    font-family: 'Consolas';
+    color: var(--main);
+    overflow: auto;
+    padding: 5px;
+    width: 379px;
+    height: 58vh;
+}
+.bienvenida{
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2vh;
+}
+.bienvenida img{
+    width: 100%;
+}
+.boton{
+    height: 7vh;
+    float: left;
+}
+.boton img{
+    padding: 2vh;
+}
+.scroller{
+    font-family: 'Consolas';
+    overflow: auto;
+    height: 150px;
+    width: 90%;
+    background-color: var(--main);
+    border: 1px solid var(--main);
+    font-family: 'Consolas';
+    color: var(--dark);
+    margin: 2%;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+.resaltado{
+    color: var(--accent);
+}
+.media{
+    color: var(--accent);
+    text-align: center;
+}
+.media img{
+    border: 1px solid var(--main);
+    width: 90%;
+}
+.entrada{
+    border: 1px solid var(--main);
+    margin: 5%;
+    padding: 2%;
+}
+.promoElement{
+    border: 1px solid var(--main);
+    margin-left: 7.5%;
+    margin-top: 2vh;
+    width: 80%;
+    padding: 2.5%;
+}
+.promoName a{
+    font-family: 'Barriecito';
+}
+.promoImg img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--main);
+    border-radius: 50px;
+    background-color: var(--main);
+}
+.oc{
+    background-color: var(--dark);
+    border: 1px solid var(--main);
+    padding: 2%;
+    color: var(--main);
+    width: 90%;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.retrato{
+    border: 1px solid var(--main);
+    width: 90%;
+    margin: 5%;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1280px){
+    .logo{
+        left: 20%;
+    }    
+}
+@media screen and (max-width: 800px){
+    .lateral{
+        width: 100vw;
+        border-right: none;
+    }
+    .localizaciones{
+        display: none;
+    }
+    .barra{
+        width: 20vw;
+    }
+    .barra marquee{
+        margin-left: -5px;
+        height: 30vh;
+    }
+    .frame{
+        width: 80vw;
+    }
+    .frame iframe{
+        width: 100%;
+    }
+    .portadaAbout{
+        width: 100vw;
+    }
+    .portadaArt{
+        width: 100vw;
+    }
+    .portadaBlog{
+        width: 100vw;
+    }
+    .portadaHome{
+        width: 100vw;
+    }
+    .portadaOcs{
+        width: 100vw;
+    }
+    .portadaPromo{
+        width: 100vw;
+    }
+    .titulo{
+        width: 100vw;
+    }
+    .contenido{
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 378px){
+    .bienvenida{
+        display: block;
+    }
+}
